@@ -12,13 +12,15 @@
 <body>
     <div class="container-fluid">
         <div class="jumbotron text-center">
-            <h1>Read the...</h1>
-            <p>Article1. Article2. Article3.</p>
+            <h1>Read Mars Articles</h1>
             <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get News!</a></p>
         </div>
-        <h2>Here are your articles:</h2>
-        <h3>Article1: {{ news_title }}</h3>
-        <h3>{{  news_article  }}</h3>
+        <div class="row" id="mars_news">
+            <div class= "col-md-12">
+                <h3 class="heading">{{ articles.news_title }}</h3>
+                <h3 class>{{  articles.news_article  }}</h3>
+            </div>
+        </div>
     </div>
 </body>
 </html>
