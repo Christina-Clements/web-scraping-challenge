@@ -27,3 +27,20 @@ def scrape():
 
     browser.quit()
     return mars_news
+def scrape_pic():
+    browser_pic= init_browser()
+    mars = {}
+    featured_image_url = "https://mars.nasa.gov/news/"
+    browser_pic.visit(featured_image_url)
+
+    html = browser_pic.html
+    soup = bs(html, "html.parser")
+
+    mars = soup.find("img style").get_jpg()
+    
+   
+
+    browser.quit()
+    return mars
+
+    
