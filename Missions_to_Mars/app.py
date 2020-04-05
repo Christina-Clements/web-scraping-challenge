@@ -3,8 +3,13 @@ from flask_pymongo import PyMongo
 import scrape_mars
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
+
 mongo = PyMongo(app)
+
+conn = 'mongodb://localhost:27017'
+client = pymongo.MongoClient(conn)
+db = client.current_mars_info
+collection = db.mars_info
 
 @app.route("/")
 def index():
